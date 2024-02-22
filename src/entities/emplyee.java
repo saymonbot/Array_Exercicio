@@ -57,4 +57,11 @@ public class emplyee {
 		emplyee other = (emplyee) obj;
 		return Objects.equals(id, other.id);
 	}
+
+	@Override
+	public String toString() {
+		return id + ", " + name + ", " + String.format("%.2f", salary);
+	}
+	
+	
 }
