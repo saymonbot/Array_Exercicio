@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entities.emplyee;
+import entities.employee;
 
 public class Program {
 
@@ -12,13 +12,13 @@ public class Program {
 
 		Scanner scan = new Scanner(System.in);
 		
-		List<emplyee> list = new ArrayList<>();
+		List<employee> list = new ArrayList<>();
 		
 		System.out.println("How many employees will be registered?");
 		int a = scan.nextInt();
 		
 		for(int i = 0; i < a; i++) {
-			System.out.println("Employee #" + (i + 1));
+			System.out.println((i + 1)  + "º employee");
 			System.out.println("Id: ");
 			int id = scan.nextInt();
 
@@ -29,11 +29,9 @@ public class Program {
 	        System.out.println("Salary: ");
 	        Double salary = scan.nextDouble();
 	        
-	        
-	        emplyee emp = new emplyee(id, name, salary);
+	        employee emp = new employee(id, name, salary);
 	        
 	        list.add(emp);
-	        
 		}
 	        
 	        System.out.println("Enter id employee that will have salary increase: ");
@@ -48,22 +46,19 @@ public class Program {
 	        }
 	        
 	    System.out.println("List of employees: ");
-	    for (emplyee emp : list) {
+	    for (employee emp : list) {
 	    	System.out.println(emp);
 	    }
-	    
-		
-		scan.close();
 
+		scan.close();
 	}
-		
-		public static Integer position(List<emplyee> list, int id) {
+	
+		public static Integer position(List<employee> list, int id) {
 			for (int i = 0; i < list.size(); i++) {	
 				if(list.get(i).getId() == id) {
 					return i;
 				}
 			}
 			return null;
-		
 	}
 }

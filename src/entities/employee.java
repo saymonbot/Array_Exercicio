@@ -2,16 +2,16 @@ package entities;
 
 import java.util.Objects;
 
-public class emplyee {
+public class employee {
 
 	private Integer id;
 	private String name;
 	private Double salary;
 	
-	public emplyee() {
+	public employee() {
 	}
 
-	public emplyee(Integer id, String name, Double salary) {
+	public employee(Integer id, String name, Double salary) {
 		this.name = name;
 		this.id = id;
 		this.salary = salary;
@@ -54,14 +54,12 @@ public class emplyee {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		emplyee other = (emplyee) obj;
+		employee other = (employee) obj;
 		return Objects.equals(id, other.id);
 	}
 
 	@Override
 	public String toString() {
 		return id + ", " + name + ", " + String.format("%.2f", salary);
-	}
-	
-	
+	}	
 }
