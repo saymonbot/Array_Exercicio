@@ -60,6 +60,6 @@ public class employee {
 
 	@Override
 	public String toString() {
-		return "Id: " + id + ", Name: " + name + ", Salary: " + String.format("%.2f", salary);
+		return "Id: " + id + "\nName: " + name + "\nSalary: " + String.format("%.2f", salary);
 	}	
 }
