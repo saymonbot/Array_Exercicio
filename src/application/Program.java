@@ -33,7 +33,7 @@ public class Program {
 	        
 	        list.add(emp);
 		}
-	        
+
 	        System.out.println("Enter id employee that will have salary increase: ");
 	        int idInc = scan.nextInt();
 	        Integer pos = position(list, idInc);
@@ -49,7 +49,7 @@ public class Program {
 	    for (employee emp : list) {
 	    	System.out.println(emp);
 	    }
-
+	    
 		scan.close();
 	}
 	
